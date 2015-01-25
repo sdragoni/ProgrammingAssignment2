@@ -4,7 +4,16 @@
 ## and store the calculated inverse matrix
 
 
-## Write a short comment describing this function
+## The makeCacheMatrix function takes the matrix and stores it to a unique 
+## enviorment. It also creates and stores the functions that act on that matrix
+## These functions are:-
+## set - This function allows the original matrix to be changed. Passing a new 
+##    matrix to the enviroment means that the inverse is no longer correct and 
+##    therefore needs to be cleared (m <<- NULL). This is not called by cacheSolve
+## get - returns the matrix (x) passsed to makeCacheMatrix
+## setsolve - is passed the inverse matrix and stores it in m
+## getsolve - returns the inverse matix (m). Returns Null if has not calculated
+
 
 makeCacheMatrix <- function(x = matrix()) {
       m <- NULL
