@@ -1,5 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The makeCacheMatrix function stores the matrix and creates four functions in a 
+## unique environment. When these functions are called by the cacheSolve function
+## they check for prior calculation, get the matrix and the inverse (if calculated) 
+## and store the calculated inverse matrix
+
 
 ## Write a short comment describing this function
 
