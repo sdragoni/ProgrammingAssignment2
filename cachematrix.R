@@ -31,7 +31,17 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve - Return a matrix that is the inverse of 'x'
+## Using the matrix stored in the unique enviroment by makeCacheMatrix
+## cacheSolve uses the functions in makeCacheMatrix to return the inverse
+## First it uses getsolve to see if the inverse has been previously created
+##    if getsolve does not return null then the inverse is returned
+
+## If the inverse has not been created then the original matrix is retrieved
+##    using the get function and stored in data 
+##    The solve function is called to inverse the matrix (using data)
+##    the result is stored in m. Setsolve is then called to store the matrix so
+##    that there is no need for recalculation if called again
 
 cacheSolve <- function(x, ...) {
       ## Return a matrix that is the inverse of 'x'
